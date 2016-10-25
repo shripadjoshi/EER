@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EER</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  	<div class="container">
+  		        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="javascript:void(0)">EER</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="#/home">Home</a></li>
+                    <li><a href="<%= companies_path %>">Company</a></li>
+                    <!-- <li class="dropdown {{activeTabMaster == 'Master' ? 'active' : ''}}">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">Master
+        <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="{{activeTab == 'Department' ? 'active' : ''}}"><a href="#/departments">Department</a></li>
+                            <li class="{{activeTab == 'Designation' ? 'active' : ''}}"><a href="#/designations">Designation</a></li>
+                            <li class="{{activeTab == 'Employee' ? 'active' : ''}}"><a href="#/employees">Employee</a></li>
+                            <li class="{{activeTab == 'User' ? 'active' : ''}}"><a href="#/users">User</a></li>
+                        </ul>
+                    </li> -->
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </nav>
+        <%= render 'layouts/messages' %>
+    	<%= yield %>
+
+    </div>
+  </body>
+</html>

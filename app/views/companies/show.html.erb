@@ -1,0 +1,62 @@
+<p>
+  <strong>Name:</strong>
+  <%= @company.name %>
+</p>
+
+<p>
+  <strong>Logo:</strong>
+  <%= @company.logo %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @company.website %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @company.address %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @company.country %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @company.state %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @company.city %>
+</p>
+
+<p>
+  <strong>Pincode:</strong>
+  <%= @company.pincode %>
+</p>
+
+<p>
+  <strong>Phone no:</strong>
+  <%= @company.phone_no %>
+</p>
+
+<p>
+  <strong>Mobile no:</strong>
+  <%= @company.mobile_no %>
+</p>
+
+<p>
+  <strong>Company type:</strong>
+  <%= @company.company_type %>
+</p>
+
+<p>
+  <strong>Industry type:</strong>
+  <%= @company.industry_type %>
+</p>
+
+<%= link_to 'Edit', edit_company_path(@company) %> |
+<%= link_to 'Back', companies_path %>
