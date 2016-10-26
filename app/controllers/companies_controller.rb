@@ -19,6 +19,9 @@ class CompaniesController < ApplicationController
   # POST /companies
   # POST /companies.json
   def create
+    puts "*"*10
+    puts params
+    puts "*"*10
     @company = Company.new(company_params)
 
     respond_to do |format|
@@ -31,6 +34,7 @@ class CompaniesController < ApplicationController
         format.json { render json: @company.errors, status: :unprocessable_entity }
       end
     end
+
   end
 
   # PATCH/PUT /companies/1

@@ -1,5 +1,5 @@
-
-    function ajaxCall() {
+ 
+ function ajaxCall() {
         this.send = function(data, url, method, success, type) {
           type = type||'json';
           var successRes = function(data) {
@@ -100,27 +100,25 @@ function locationInfo() {
 
 }
 
-$(function() {
-var loc = new locationInfo();
-loc.getCountries();
- $(".countries").on("change", function(ev) {
-        var countryId = $("option:selected", this).attr('countryid');
-        if(countryId != ''){
-        loc.getStates(countryId);
-        }
-        else{
-            $(".states option:gt(0)").remove();
-        }
-    });
- $(".states").on("change", function(ev) {
-        var stateId = $("option:selected", this).attr('stateid');
-        if(stateId != ''){
-        loc.getCities(stateId);
-        }
-        else{
-            $(".cities option:gt(0)").remove();
-        }
-    });
-});
-
-
+function callLocations() {
+	var loc = new locationInfo();
+	loc.getCountries();
+	 $(".countries").on("change", function(ev) {
+	        var countryId = $("option:selected", this).attr('countryid');
+	        if(countryId != ''){
+	        loc.getStates(countryId);
+	        }
+	        else{
+	            $(".states option:gt(0)").remove();
+	        }
+	    });
+	 $(".states").on("change", function(ev) {
+	        var stateId = $("option:selected", this).attr('stateid');
+	        if(stateId != ''){
+	        loc.getCities(stateId);
+	        }
+	        else{
+	            $(".cities option:gt(0)").remove();
+	        }
+	    });
+};
