@@ -51,7 +51,7 @@
     <label class="col-md-4 control-label">Country</label>        
     <div class="col-md-4 inputGroupContainer">
       <div class="input-group">
-        <select name="country" class="countries" id="countryId">
+        <select name="country" class="countries" id="countryId" value="<%= @company.country %>">
           <option value="">Select Country</option>
         </select>
         <%= f.hidden_field :country %>
@@ -147,5 +147,15 @@
   </div>
 <% end %>
 <script type="text/javascript">
-  callLocations();
+  $(document).ready(function(){
+    callLocations();
+    //$("#countryId select").val($("#company_country").val());
+    /*$("#countryId option").filter(function() {
+      //may want to use $.trim in here
+      console.log($(this).text());
+      return $(this).text() == $("#company_country").val(); 
+    }).prop('selected', true);*/
+    
+  })
+  
 </script>

@@ -17,5 +17,6 @@ $(document).ready(function(){
 		$("#company_state").val($("#stateId").val());
 		$("#company_city").val($(this).val());
 	})
+	
 })
 
