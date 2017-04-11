@@ -10,18 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161025091321) do
+ActiveRecord::Schema.define(version: 20170411094726) do
 
   create_table "companies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "website"
     t.text     "address",           limit: 65535
-    t.string   "country"
-    t.string   "state"
+    t.bigint   "country_id"
+    t.bigint   "state_id"
     t.string   "city"
-    t.integer  "pincode"
-    t.integer  "phone_no"
-    t.integer  "mobile_no"
+    t.bigint   "pincode"
+    t.bigint   "phone_no"
+    t.bigint   "mobile_no"
     t.string   "company_type"
     t.string   "industry_type"
     t.datetime "created_at",                      null: false
@@ -30,6 +30,19 @@ ActiveRecord::Schema.define(version: 20161025091321) do
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
+  end
+
+  create_table "countries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "states", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.integer  "country_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

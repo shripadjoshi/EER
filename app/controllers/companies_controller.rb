@@ -4,7 +4,7 @@ class CompaniesController < ApplicationController
   # GET /companies
   # GET /companies.json
   def index
-    @companies = Company.all
+    @companies = Company.all.includes([:country,:state])
   end
 
   # GET /companies/new
@@ -19,9 +19,6 @@ class CompaniesController < ApplicationController
   # POST /companies
   # POST /companies.json
   def create
-    puts "*"*10
-    puts params
-    puts "*"*10
     @company = Company.new(company_params)
 
     respond_to do |format|
@@ -70,6 +67,6 @@ class CompaniesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def company_params
-      params.require(:company).permit(:name, :logo, :website, :address, :country, :state, :city, :pincode, :phone_no, :mobile_no, :company_type, :industry_type)
+      params.require(:company).permit(:name, :logo, :website, :address, :country_id, :state_id, :city, :pincode, :phone_no, :mobile_no, :company_type, :industry_type)
     end
 end

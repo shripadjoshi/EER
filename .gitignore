@@ -16,3 +16,17 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+/tmp
+/nbproject/*
+nbproject/*
+db/schema.rb
+db/schema.rb
+db/sphinx/*
+/*.txt
+coverage/
+rails_best_practices_output.html
+/uploads
+/uploads/*
+/public/uploads
+/public/uploads/*

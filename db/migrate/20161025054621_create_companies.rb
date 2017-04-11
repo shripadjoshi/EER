@@ -4,12 +4,12 @@ class CreateCompanies < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :website
       t.text :address
-      t.string :country
-      t.string :state
+      t.integer :country_id, :limit => 8
+      t.integer :state_id, :limit => 8
       t.string :city
-      t.integer :pincode
-      t.integer :phone_no
-      t.integer :mobile_no
+      t.integer :pincode, :limit => 8
+      t.integer :phone_no, :limit => 8
+      t.integer :mobile_no, :limit => 8
       t.string :company_type
       t.string :industry_type
 

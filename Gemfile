@@ -33,6 +33,9 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'jquery-datatables-rails', '~> 3.4.0'
 gem "paperclip", "~> 5.0.0"
 gem 'geokit-rails'
+
+gem 'simple_form'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
@@ -45,6 +48,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'rack-mini-profiler'
+  gem "rails_best_practices"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
